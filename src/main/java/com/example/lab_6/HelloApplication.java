@@ -56,24 +56,32 @@ public class HelloApplication extends Application {
         luminosite.setShowTickMarks(true);
         luminosite.setMajorTickUnit(1);
         luminosite.setMinorTickCount(1);
+        Tooltip aideluminosite = new Tooltip("Clair ou sombre");
+        luminosite.setTooltip(aideluminosite);
 
         Slider contraste = new Slider(-1, 1, 0);
         contraste.setShowTickLabels(true);
         contraste.setShowTickMarks(true);
         contraste.setMajorTickUnit(1);
         contraste.setMinorTickCount(1);
+        Tooltip aidecontraste = new Tooltip("Variation ombre et lumière");
+        contraste.setTooltip(aidecontraste);
 
         Slider teinte = new Slider(-1, 1, 0);
         teinte.setShowTickLabels(true);
         teinte.setShowTickMarks(true);
         teinte.setMajorTickUnit(1);
         teinte.setMinorTickCount(1);
+        Tooltip aideteinte = new Tooltip("Modification nuances");
+        teinte.setTooltip(aideteinte);
 
         Slider saturation = new Slider(-1, 1, 0);
         saturation.setShowTickLabels(true);
         saturation.setShowTickMarks(true);
         saturation.setMajorTickUnit(1);
         saturation.setMinorTickCount(1);
+        Tooltip aidesaturation = new Tooltip("Remplir les couleurs");
+        saturation.setTooltip(aidesaturation);
 
         VBox modification = new VBox(luminositeText, luminosite, contrasteText, contraste, teinteText, teinte, saturationText, saturation);
         modification.setAlignment(Pos.CENTER);
