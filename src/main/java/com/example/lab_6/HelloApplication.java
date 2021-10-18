@@ -8,9 +8,8 @@ import javafx.scene.control.*;
 import javafx.scene.effect.ColorAdjust;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -43,6 +42,9 @@ public class HelloApplication extends Application {
 
         //Information en bas
         Label information = new Label("");
+
+        information.setMaxSize(Double.MAX_VALUE,Double.MAX_VALUE);
+        information.setBackground(new Background(new BackgroundFill(Color.LIGHTGREY, null, null)));
 
         //Textes
         Label luminositeText = new Label("Luminosité");
