@@ -95,9 +95,18 @@ public class HelloApplication extends Application {
         interfaceMenu.setAlignment(Pos.CENTER);
 
         //Charger les images
-        image1.setOnAction((n) -> imagedefault.setImage(new Image("file:image1.png")) );
-        image2.setOnAction((n) -> imagedefault.setImage(new Image("file:image2.png")) );
-        image3.setOnAction((n) -> imagedefault.setImage(new Image("file:image3.png")) );
+        image1.setOnAction((n) -> {
+            imagedefault.setImage(new Image("file:image1.png"));
+            information.setText("Image #1 affichée");
+        });
+        image2.setOnAction((n) -> {
+            imagedefault.setImage(new Image("file:image2.png"));
+            information.setText("Image #2 affichée");
+        });
+        image3.setOnAction((n) -> {
+            imagedefault.setImage(new Image("file:image3.png"));
+            information.setText("Image #3 affichée");
+        });
 
         //Réinisialiser
         reinisialiser.setOnAction((n) -> {
